@@ -22,12 +22,15 @@ requirements:
   host:
     - python >=3.6
     - pip
+    - wheel
   run:
     - python >=3.6
     - requests >=2.22.0
     - requests-toolbelt >=0.9.1
 
 test:
+  commands:
+    - pip check
   imports:
     - gitlab
 
@@ -45,6 +48,8 @@ about:
   dev_url: https://github.com/python-gitlab/python-gitlab
 
 extra:
+  anaconda-services:
+    ref: https://anaconda.zendesk.com/agent/tickets/34583
+
   recipe-maintainers:
-    - hoechenberger
-    - kastman
+    - ianaobi
